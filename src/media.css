@@ -1,0 +1,198 @@
+
+
+@media screen and (max-width:1170px) {
+
+    .footer_tnx {
+
+        font-size: 40px;
+        /* background-color: rgb(0, 174, 255); */
+    }
+
+    /* responsive header */
+    :root {
+        --w:400px;
+      --h:350px; 
+    }
+  
+    
+    .filebox {
+        display: block;
+    }
+
+   
+    
+    .filebox_icon {
+        position: absolute;
+        width: 50px;
+        /* padding: 0px 20px; */
+        top: 4vh;
+        /* left: 20px; */
+        right: 20px;
+        color: rgb(0, 255, 238);
+        /* background-color: rgb(17, 255, 0); */
+        font-size: x-large;
+        border: 0.05px solid aqua;
+        border-radius: 2px 5%;
+        z-index: 999;
+    
+    }
+
+    
+    .header{
+        justify-content: start;
+        padding-top: 100px;
+        padding-bottom: 20px;
+         flex-direction: column;
+        row-gap: 50px;
+        /* background-color: rgba(0, 221, 255, 0.044); */
+        box-shadow: 0px 0px 1px rgb(255, 255, 255);
+        backdrop-filter: blur(10px) !important;
+        -webkit-backdrop-filter: blur(10px) !important;
+         position: absolute;
+         /* left: -400px; */
+         left: 20px;
+        /* top: 0px; */
+        /* width: 20vw; */
+        /* height: 60vh; */
+        z-index: 6;
+        transition: all 300ms ease;
+        /* border-radius: 0px 0px 50px 0px ; */
+    }
+    
+    nav ul{
+        flex-direction: column;
+        /* justify-content: center; */
+        /* align-items: center; */
+        row-gap: 20px;
+        /* background-color: red; */
+        
+       
+    }
+    nav ul li{
+        margin: 0px;
+
+    }
+
+    .iconname{
+        padding: 0px 5vw;
+      }
+    
+
+    
+    
+    }
+    
+
+
+    
+@media screen and (max-width:800px) {
+    .landing_div h1 {
+       
+        font-size: 40px;
+        letter-spacing: 1vw;
+    }
+    .landing_img {
+        flex-wrap: wrap-reverse;
+    }
+
+    .position {
+        position: relative;
+        width: var(--w);
+        height: var(--h);
+        margin: 50px 0px;
+        margin-top: 150px;
+    }
+
+
+
+    .btn{
+        margin: auto;
+        margin-top:40px ;
+        margin-bottom:40px ;
+        width: 45vw;
+    }
+
+    
+.btn::after{
+    width: 100%;
+  }
+
+
+.landing_div h3 {
+    margin-left: 40vw;
+    
+}
+
+}
+
+
+    
+
+    @media screen and (max-width:500px){
+
+        :root {
+            --w:300px;
+          --h:250px; 
+        }
+
+        .btn{
+            width: 70vw;
+            height: 40px;
+            font-size: 15px;
+        }
+
+
+        .about_ul {
+            --col-gap: 0rem;
+           
+           
+        }
+
+        .wrap {
+            max-width: 100%;
+            margin: 0px ;
+            padding: 0px;
+           
+        }
+        .landing_div h3 {
+            margin-left: 25vw;
+        }
+    
+    }
+
+
+    @media screen and (max-width:360px){
+
+        :root {
+            --w:250px;
+          --h:200px; 
+        }
+
+        .landing_div h3 {
+            margin-left: 0vw;
+        }
+
+        .card_button {
+            /* background-color: red; */
+            padding: 0.5vh 0;
+          
+        }
+        .btn{
+            width: 90vw;
+            height: 35px;
+        }
+
+        .glow{
+            font-size: 50px;
+        }
+
+        .landing_div h1 {
+            
+            font-size: 40px;
+            color: rgb(0, 208, 255);
+            letter-spacing: 0vw;
+        }
+
+
+
+    }
