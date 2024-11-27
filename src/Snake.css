@@ -1,0 +1,91 @@
+.loader{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(60, 59, 57);
+    color: black;
+    font-size: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /* animation:loader_amimation 5s ease ; */
+
+    z-index: 999;
+
+    top: -100%;
+
+
+ /* transform: scale(0);  */
+    
+
+  }
+
+  .loader h1{
+    color: red;
+    /* width: 0%;
+    height: 0%; */
+    /* background-color: antiquewhite; */
+  }
+
+
+@keyframes loader_amimation {
+    
+    0% {
+        /* transform: scale(100); */
+        /* opacity: 1; */
+
+        top: 0;
+       
+
+    }
+  
+
+    100% {
+       
+        top: -100%;
+        /* display:none !important; */
+
+        /* opacity: 0; */
+        
+    }
+
+}
+
+
+
+.snake_bg{
+    width: 100%;
+    height: 100vh;
+    background-color: #416163;
+    background-image: url("bg.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#board{
+
+    background-color: aquamarine;
+    width: 90vmin ;
+    height: 91vmin;
+    border: 1px solid black;
+    grid-template-rows: repeat(18 , 1fr) ;
+    grid-template-columns : repeat(18 , 1fr) ;
+
+}
+
+
+.head{
+    background-color: red;
+}
+
+.food{
+    background-color: rgb(255, 119, 142);
+}

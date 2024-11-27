@@ -3,8 +3,9 @@ import React from 'react'
 function About() {
   return (
     <>
-<div className='about_main_div'>
-<h1 className='about_h1 glow'>About me</h1>
+<div className='about_main_div' id='details'>
+{/* <h1 className='about_h1 glow'>About me</h1> */}
+<h1 className='about_h1 glow'>Education</h1>
 <ul className='about_ul'>
     <li  >
         <div className="date"></div>

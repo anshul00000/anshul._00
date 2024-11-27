@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 function Contact() {
 
@@ -25,10 +25,39 @@ function Contact() {
       });
 
 
+
+  const [result, setResult] = useState();
+
+  const onSubmit = async (event) => {
+
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "19c15ea9-cc73-4fb6-9c71-2cde6ee88951");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
+
+
+
   return (
     <>
 
-<div className="contact_container">
+<div className="contact_container" id='contact'>
       <span className="big-circle"></span>
       <img src="img/shape.png" className="square" alt="." />
       <div className="form">
@@ -89,33 +118,50 @@ function Contact() {
           </div>
         </div>
 
+
+
+
         <div className="contact_form">
           <span className="circle one"></span>
           <span className="circle two"></span>
 
-          <form action="index.html" autocomplete="off">
+          <form onSubmit={onSubmit}>
+
+          {/* <input type="hidden" name="access_key" value="19c15ea9-cc73-4fb6-9c71-2cde6ee88951" />   */}
+
             <h3 className="contact_title">Contact us</h3>
             <div className="input-container">
-              <input type="text" name="name" className="input" />
-              <label for="">Username</label>
+              
+              <input type="text" name="name" className="input"  required />
+              <label for="">Name</label>
               <span>Username</span>
             </div>
             <div className="input-container">
-              <input type="email" name="email" className="input" />
+              <input type="email" name="email" className="input"  required />
               <label for="">Email</label>
               <span>Email</span>
             </div>
-            <div className="input-container">
+            
+            {/* <div className="input-container">
               <input type="tel" name="phone" className="input" />
               <label for="">Phone</label>
               <span>Phone</span>
-            </div>
+            </div> */}
+
+
             <div className="input-container textarea">
-              <textarea name="message" className="input"></textarea>
+              <textarea name="message" className="input"  required></textarea>
               <label for="">Message</label>
               <span>Message</span>
             </div>
-            <input type="submit" value="Send" className="contact_btn" />
+
+
+
+            <input type="submit" className="contact_btn" />
+
+        <span>{result}</span>
+
+
           </form>
         </div>
       </div>
