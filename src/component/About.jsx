@@ -19,7 +19,7 @@ function About() {
     </li>
     
     <li >
-        <div className="date">2021</div>
+        <div className="date">2024</div>
         <div className="title">3 Year Diploma <span style={{fontSize:'15px'}}>&#10549;</span></div>
         <div className="descr">pursuing 3 Year Diploma Dr. B.R. Ambedkar Polytechnic College Gwalior</div>
     </li>
@@ -27,6 +27,12 @@ function About() {
         <div className="date">2023</div>
         <div className="title">12<sup>th</sup> <span style={{fontSize:'15px'}}>&#10549;</span></div>
         <div className="descr">12<sup>th</sup> GOVT.HIGH SCHOOL CHANDERA KHAS (M.P)  (Private) .</div>
+    </li>
+
+    <li >
+        <div className="date">2027</div>
+        <div className="title">B.tech<sup></sup> <span style={{fontSize:'15px'}}>&#10549;</span></div>
+        <div className="descr">Lakshmi Narain College of Technology, Bhopal (LNCT) with Computer Science 😊 .</div>
     </li>
     
 </ul>
